@@ -14,7 +14,36 @@ Ouvrez ensuite le dossier `lab03b` dans Visual Studio Code. Prenez connaissance 
 
 ## 0 - Création du menu
 
-TODO
+Pour commencer, il serait agréable d'avoir une liste de liens vers chaque exercice sur la page d'accueil (`index.php`), comme ceci:
+
+![](images-readme/menu.png)
+
+Nous allons utiliser un tableau associatif pour générer ce menu!
+
+Ajoutez d'abord le code suivant au début du fichier `index.php`:
+
+```php
+$pages = [
+    'Villes et régions' => 'pages/villes_regions.php',
+    'Page secrète' => 'pages/page_secrete.php',
+    'Formulaire de réservation' => 'pages/reservation.php',
+    'Tic Tac Toe' => 'pages/tic_tac_toe.php',
+];
+```
+
+Ce code déclare une variable `$pages`et l'initialise avec un **tableau associatif** dont les clés sont les titres des page et les valeurs sont leurs emplacements relatifs.
+
+Ajoutez maintenant le code suivant entre les balises `<nav>` et `</nav>`:
+
+```php
+<ul>
+    <?php
+    foreach ($pages as $titre => $url) {
+        echo "<li><a href='{$url}'>{$titre}</a></li>";
+    }
+    ?>
+</ul>
+```
 
 ## 1 - Villes et régions
 
@@ -142,3 +171,5 @@ Vérifiez d'abord la présence et la validité des données reçues (*Never Trus
 À l'aide d'un tableau à deux dimensions et des variables de session, reproduisez le jeu de Tic Tac Toe ci-dessous:
 
 ![](images-readme/demo-tic-tac-toe.gif)
+
+Bonne chance!
