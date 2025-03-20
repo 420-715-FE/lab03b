@@ -98,7 +98,7 @@ Ajoutez un lien `Entrer une autre ville` qui ramène l'utilisateur au formulaire
 
 ### Étape 2.1
 
-Dans le fichier `pages/page_secrete.php`, faites en sorte que la page "Page secrète" demande un mot de passe pour accéder à son contenu. Le mot de passe doit être « **abricot** ». Si le mot de passe saisi est le bon, on affiche « **Bravo! Vous avez trouvé le mot de passe!** ». Sinon, on affiche « **Mot de passe incorrect.**
+Dans le fichier `pages/page_secrete.php`, faites en sorte que la page "Page secrète" demande un mot de passe pour accéder à son contenu. Le mot de passe doit être « **abricot** ». Si le mot de passe saisi est le bon, on affiche « **Bravo! Vous avez trouvé le mot de passe!** ». Sinon, on affiche « **Mot de passe incorrect** ».
 
 ![](images-readme/page-secrete-1.png)
 
