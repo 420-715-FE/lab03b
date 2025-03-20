@@ -3,6 +3,7 @@
 $pages = [
     'Villes et régions' => 'pages/villes_regions.php',
     'Page secrète' => 'pages/page_secrete.php',
+    'Formulaire de réservation' => 'pages/reservation.php',
 ]
 
 ?>

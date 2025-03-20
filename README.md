@@ -125,4 +125,14 @@ Une fois l'utilisateur connecté, il faut le saluer avec son vrai nom plutôt qu
 
 Les noms d'utilisateur et les mots de passe, eux, ne changent pas. L'utilisatrice Jacynthe Laplante doit toujours taper le nom d'utilisateur `jaja72` et le mot de passe `lapin` pour se connecter.
 
+> **Attention:** vous ne devez ajouter aucune nouvelle structure conditionnelle!
+
 ![](images-readme/demo-page-secrete-vrai-nom.gif)
+
+## 3 - Formulaire de réservation
+
+Dans le fichier `pages/reservation.php`, vous trouverez un formulaire de réservation d'une chambre d'hôtel. Modifiez le fichier afin d'afficher les informations suivantes provenant du formulaire une fois la réservation transmise:
+
+![](images-readme/confirmation-reservation.png)
+
+Vérifiez d'abord la présence et la validité de toutes les données reçues (*Never Trust User Input!*). N'oubliez pas également de vous prémunir contre l'injection de balises HTML avant d'afficher les informations sur la page!
