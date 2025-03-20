@@ -135,4 +135,4 @@ Dans le fichier `pages/reservation.php`, vous trouverez un formulaire de réserv
 
 ![](images-readme/confirmation-reservation.png)
 
-Vérifiez d'abord la présence et la validité de toutes les données reçues (*Never Trust User Input!*). N'oubliez pas également de vous prémunir contre l'injection de balises HTML avant d'afficher les informations sur la page!
+Vérifiez d'abord la présence et la validité des données reçues (*Never Trust User Input!*). N'oubliez pas également de vous prémunir contre l'injection de balises HTML avant d'afficher les informations sur la page!

@@ -21,10 +21,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Villes et régions</title>
+    <title>Réservation</title>
     <link rel="stylesheet" href="../water.css">
 </head>
 <body>
+    <nav>
+        <a href="../index.php">Retour</a>
+    </nav>    
     <?php   
         if (isset($_POST['submit'])) {
         if (!isset($_POST['province']) || !isset($provinces[$_POST['province']])) {
