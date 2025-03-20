@@ -1,17 +1,22 @@
 <?php
 
+session_start();
+
+$motDePasse = 'abricot';
 $estAuthentifie = false;
 $mauvaisMotDePasse = false;
 
-$motDePasse = 'abricot';
-
-if (isset($_POST['mot_de_passe'])) {
+if (isset($_SESSION['estAuthentifie'])) {
+    $estAuthentifie = $_SESSION['estAuthentifie'];
+} else if (isset($_POST['mot_de_passe'])) {
     if ($_POST['mot_de_passe'] === $motDePasse) {
         $estAuthentifie = true;
+        $_SESSION['estAuthentifie'] = true;
     } else {
         $mauvaisMotDePasse = true;
     }
 }
+
 
 ?>
 

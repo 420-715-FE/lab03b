@@ -72,5 +72,13 @@ Ajoutez un lien `Entrer une autre ville` qui ramène l'utilisateur au formulaire
 Dans le fichier `pages/page_secrete.php`, faites en sorte que la page "Page secrète" demande un mot de passe pour accéder à son contenu. Le mot de passe doit être « **abricot** ». Si le mot de passe saisi est le bon, on affiche « **Bravo! Vous avez trouvé le mot de passe!** ». Sinon, on affiche « **Mot de passe incorrect.**
 
 ![](images-readme/page-secrete-1.png)
+
 ![](images-readme/page-secrete-2.png)
+
 ![](images-readme/page-secrete-3.png)
+
+### Étape 2.2
+
+Modifiez la page en ajoutant une variable de session pour faire en sorte que la connexion soit **persistante**, c'est-à-dire qu'une fois qu'on est authentifié, on reste authentifié même si on quitte la page et qu'on y revient.
+
+![](images-readme/demo-page-secrete-session.gif)
