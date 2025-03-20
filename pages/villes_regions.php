@@ -13,14 +13,6 @@ $regionsParVilles = [
     "Drummondville" => "Centre-du-Québec",
 ];
 
-/*if (!isset($_GET['ville'])) {
-    $texte = "Entrez le nom d'une ville:";
-} else if (!isset($regionsParVilles[$_GET['ville']])) {
-    $texte = 'Ville non trouvée.';
-} else {
-    $texte = 'La ville de ' . $_GET['ville'] . ' est dans la région administrative "' . $regionsParVilles[$_GET['ville']] . '".';
-}*/
-
 ?>
 
 <!DOCTYPE html>
