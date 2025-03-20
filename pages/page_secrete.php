@@ -2,10 +2,10 @@
 
 session_start();
 
-$motsDePasse = [
-    'jaja72' => 'lapin',
-    'petitefleur145' => 'chat',
-    'bob' => 'poisson',
+$utilisateurs = [
+    'jaja72' => ['nom' => 'Jacynthe Laplante', 'motDePasse' => 'lapin'],
+    'petitefleur145' => ['nom' => 'Rose Lafleur', 'motDePasse' => 'chat'],
+    'bob' => ['nom' => "Bob L'éponge", 'motDePasse' => 'poisson'],
 ];
 
 
@@ -23,11 +23,11 @@ if (isset($_SESSION['utilisateur'])) {
     && isset($_POST['mot_de_passe'])
 ) {
     if (
-        isset($motsDePasse[$_POST['utilisateur']])
-        && $_POST['mot_de_passe'] == $motsDePasse[$_POST['utilisateur']]
+        isset($utilisateurs[$_POST['utilisateur']])
+        && $_POST['mot_de_passe'] == $utilisateurs[$_POST['utilisateur']]['motDePasse']
     ) {
-        $_SESSION['utilisateur'] = $_POST['utilisateur'];
-        $utilisateur = $_POST['utilisateur'];
+        $_SESSION['utilisateur'] = $utilisateurs[$_POST['utilisateur']];
+        $utilisateur = $utilisateurs[$_POST['utilisateur']];
     } else {
         $erreurAuthentification = true;
     }
@@ -51,7 +51,7 @@ if (isset($_SESSION['utilisateur'])) {
     <?php
         if (isset($utilisateur)) {
         ?>
-            <p>Bonjour <strong><?= $utilisateur ?></strong> ! Bienvenue sur la page secrète!</p>
+            <p>Bonjour <strong><?= $utilisateur['nom'] ?></strong> ! Bienvenue sur la page secrète!</p>
             <a href="?deconnexion">Se déconnecter</a></p>
         <?php
         } else {

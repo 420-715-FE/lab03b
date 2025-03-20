@@ -97,7 +97,7 @@ Modifiez la page afin d'exiger **un nom d'utilisateur et un mot de passe** plut�
 |------------------ |---------------|
 | jaja72            | lapin         |
 | petitefleur145    | chat          |
-| bob19             | poisson       |
+| bob               | poisson       |
 
 Une fois que l'utilisateur est connecté, la page doit le saluer avec son nom d'utilisateur.
 
@@ -108,3 +108,21 @@ Une fois que l'utilisateur est connecté, la page doit le saluer avec son nom d'
 Si le nom d'utilisateur ou le mot de passe est incorrect, il faut afficher un message d'erreur, puis ré-afficher le formulaire.
 
 ![](images-readme/page-secrete-utilisateur-3.png)
+
+### Étape 2.5
+
+Modifiez votre code de façon à ce que chaque nom d'utilisateur soit aussi associé à un **vrai nom**. Voici les vrais noms correspondant aux trois utilisateurs:
+
+| Nom d'utilisateur | Vrai nom           |
+|------------------ |--------------------|
+| jaja72            | Jacynthe Laplante  |
+| petitefleur145    | Rose Lafleur       |
+| bob               | Bob L'éponge       |
+
+Une fois l'utilisateur connecté, il faut le saluer avec son vrai nom plutôt qu'avec son nom d'utilisateur.
+
+![](images-readme/page-secrete-vrai-nom.png)
+
+Les noms d'utilisateur et les mots de passe, eux, ne changent pas. L'utilisatrice Jacynthe Laplante doit toujours taper le nom d'utilisateur `jaja72` et le mot de passe `lapin` pour se connecter.
+
+![](images-readme/demo-page-secrete-vrai-nom.gif)
