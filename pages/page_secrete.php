@@ -2,21 +2,36 @@
 
 session_start();
 
-$motDePasse = 'abricot';
-$estAuthentifie = false;
-$mauvaisMotDePasse = false;
+$motsDePasse = [
+    'jaja72' => 'lapin',
+    'petitefleur145' => 'chat',
+    'bob' => 'poisson',
+];
 
-if (isset($_SESSION['estAuthentifie'])) {
-    $estAuthentifie = $_SESSION['estAuthentifie'];
-} else if (isset($_POST['mot_de_passe'])) {
-    if ($_POST['mot_de_passe'] === $motDePasse) {
-        $estAuthentifie = true;
-        $_SESSION['estAuthentifie'] = true;
-    } else {
-        $mauvaisMotDePasse = true;
-    }
+
+if (isset($_GET['deconnexion'])) {
+    session_unset();
+    session_destroy();
 }
 
+$erreurAuthentification = false;
+
+if (isset($_SESSION['utilisateur'])) {
+    $utilisateur = $_SESSION['utilisateur'];
+} else if (
+    isset($_POST['utilisateur'])
+    && isset($_POST['mot_de_passe'])
+) {
+    if (
+        isset($motsDePasse[$_POST['utilisateur']])
+        && $_POST['mot_de_passe'] == $motsDePasse[$_POST['utilisateur']]
+    ) {
+        $_SESSION['utilisateur'] = $_POST['utilisateur'];
+        $utilisateur = $_POST['utilisateur'];
+    } else {
+        $erreurAuthentification = true;
+    }
+}
 
 ?>
 
@@ -34,13 +49,19 @@ if (isset($_SESSION['estAuthentifie'])) {
     </nav>
     <h1>Page secrète</h1>
     <?php
-        if ($estAuthentifie) {
-            echo "<p>Bravo! Vous avez trouvé le mot de passe!</p>";
-        } else if ($mauvaisMotDePasse) {
-            echo "<p>Mot de passe incorrect.</p>";
+        if (isset($utilisateur)) {
+        ?>
+            <p>Bonjour <strong><?= $utilisateur ?></strong> ! Bienvenue sur la page secrète!</p>
+            <a href="?deconnexion">Se déconnecter</a></p>
+        <?php
         } else {
+            if ($erreurAuthentification) {
+                echo "<p>Nom d'utilisateur ou mot de passe incorrect.</p>";
+            }
             ?>
             <form action="page_secrete.php" method="post">
+                <label for="utilisateur">Nom d'utilisateur:</label>
+                <input type="text" name="utilisateur" id="utilisateur">
                 <label for="mot_de_passe">Mot de passe:</label>
                 <input type="password" name="mot_de_passe" id="mot_de_passe">
                 <button type="submit">Envoyer</button>

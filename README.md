@@ -82,3 +82,29 @@ Dans le fichier `pages/page_secrete.php`, faites en sorte que la page "Page secr
 Modifiez la page en ajoutant une variable de session pour faire en sorte que la connexion soit **persistante**, c'est-à-dire qu'une fois qu'on est authentifié, on reste authentifié même si on quitte la page et qu'on y revient.
 
 ![](images-readme/demo-page-secrete-session.gif)
+
+### Étape 2.3
+
+Modifiez la page en ajoutant un lien « Se déconnecter » qui déconnecte l'utilisateur, et ce de manière persistente.
+
+![](images-readme/demo-page-secrete-deconnexion.gif)
+
+### Étape 2.4
+
+Modifiez la page afin d'exiger **un nom d'utilisateur et un mot de passe** plutôt que seulement un mot de passe. Pour ce faire, créez d'abord un tableau qui associe des noms d'utilisateur à des mots passe. Votre tableau doint contenir les utilisateurs suivants:
+
+| Nom d'utilisateur | Mot de passe  |
+|------------------ |---------------|
+| jaja72            | lapin         |
+| petitefleur145    | chat          |
+| bob19             | poisson       |
+
+Une fois que l'utilisateur est connecté, la page doit le saluer avec son nom d'utilisateur.
+
+![](images-readme/page-secrete-utilisateur-1.png)
+
+![](images-readme/page-secrete-utilisateur-2.png)
+
+Si le nom d'utilisateur ou le mot de passe est incorrect, il faut afficher un message d'erreur, puis ré-afficher le formulaire.
+
+![](images-readme/page-secrete-utilisateur-3.png)
