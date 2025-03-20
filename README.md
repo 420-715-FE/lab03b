@@ -40,3 +40,27 @@ Faites ensuite en sorte que la page reçoive un paramètre `ville` passé dans l
 Voici le résultat attendu pour la valeur `Sherbrooke`:
 
 ![](images-readme/villes-regions-1.png)
+
+### Étape 1.2
+
+Modifiez votre page afin d'utiliser un formulaire pour indiquer le nom de la ville dont on veut connaître la région administrative. **L'information saisie ne doit pas être visible dans l'URL.** Vous devez respecter la logique décrite ci-dessous.
+
+Si le champ `ville` n'a pas été reçu, il faut afficher le formulaire:
+
+![](images-readme/villes-regions-2.png)
+
+Si le champ `ville` a été reçu mais que cette ville ne se trouve pas dans le tableau, il faut afficher ceci:
+
+![](images-readme/villes-regions-3.png)
+
+Autrement, on affiche le résultat:
+
+![](images-readme/villes-regions-1.png)
+
+### Étape 1.3
+
+Ajoutez un lien `Entrer une autre ville` qui ramène l'utilisateur au formulaire et qui s'affiche uniquement si le formulaire n'est pas présentement affiché.
+
+![](images-readme/villes-regions-4.png)
+
+![](images-readme/villes-regions-5.png)
