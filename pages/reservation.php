@@ -42,10 +42,13 @@
             if (!isset($_POST['nombreNuits']) || !is_numeric($_POST['nombreNuits']) || !is_int(+$_POST['nombreNuits'])) {
                 exit;
             }
+            if (!isset($_POST['typeChambre']) || !in_array($_POST['typeChambre'], ['1 lit double', '2 lits doubles', '1 lit Queen', '2 lits Queen', '1 lit King'])) {
+                exit;
+            }
             if (
                 !isset($_POST['prenom']) || !isset($_POST['nom']) || !isset($_POST['adresse'])
                 || !isset($_POST['ville']) || !isset($_POST['codePostal']) || !isset($_POST['telephone'])
-                || !isset($_POST['courriel']) || !isset($_POST['typeChambre']) || !isset($_POST['dateArrivee'])
+                || !isset($_POST['courriel']) || !isset($_POST['dateArrivee'])
             ) {
                 exit;
             }
